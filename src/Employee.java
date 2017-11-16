@@ -7,12 +7,12 @@ public class Employee extends Person {
 	
 	// Default Constructor
 	public Employee() {
+		super();
 		numberOfEmployees++;
-		double salary = 0.0;
 	}
 	
-	public Employee(double salary) {
-		numberOfEmployees++;
+	public Employee(String name, String SSN, double salary) {
+		super(name, SSN);
 		this.salary = salary;
 	}
 	
