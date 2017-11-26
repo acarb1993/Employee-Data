@@ -2,6 +2,7 @@
 public class Employee extends Person {
 	private static int numberOfEmployees = 0;
 	private double salary;
+	private static final double AVERAGE = 60000;
 	
 	// Constructors
 	
@@ -25,4 +26,15 @@ public class Employee extends Person {
 	public void setSalary(double salary) { this.salary = salary; }
 	
 	// Class Methods
+	
+	public void showEmployee() {
+		System.out.println("Name: " + getName() );
+		System.out.println("Social Security Number: " + getSSN() );
+		System.out.println("Salary: " + getSalary() );
+		if (getSalary() >= AVERAGE) {
+			System.out.println("This employee has an above average salary.");
+		}
+		
+		else System.out.println("This employee has a below average salary.");
+	}
 }
